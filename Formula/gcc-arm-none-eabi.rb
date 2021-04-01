@@ -16,12 +16,13 @@ class GccArmNoneEabi < Formula
       --enable-mulitlib
       --disable-nls
       --disable-werror
-      --enable-languages=c
+      --enable-languages=c,c++
       --without-headers
       --with-newlib
       --disable-libssp
     ]    
 
+    system "./contrib/download_prerequisites"
     mkdir_p "build"
     chdir "build"
     system "../configure",*args
