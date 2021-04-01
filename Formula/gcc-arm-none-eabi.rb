@@ -7,6 +7,9 @@ class GccArmNoneEabi < Formula
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later", "LGPL-2.0-or-later", "LGPL-3.0-only"]
   revision 1
 
+
+  depends_on "gcc"
+
   def install
 
 	args = %W[
@@ -21,6 +24,13 @@ class GccArmNoneEabi < Formula
       --with-newlib
       --disable-libssp
     ]    
+
+    envvars = %W[
+      CC=gcc
+      CXX=g++
+      CPP=cpp
+      LD=gcc
+    ]
 
     system "./contrib/download_prerequisites"
     mkdir_p "build"
