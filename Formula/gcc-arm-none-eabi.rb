@@ -16,7 +16,7 @@ class GccArmNoneEabi < Formula
       --enable-mulitlib
       --disable-nls
       --disable-werror
-      --enable-languages=c,c++
+      --enable-languages=c
       --without-headers
       --with-newlib
       --disable-libssp
