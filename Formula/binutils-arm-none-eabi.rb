@@ -1,4 +1,4 @@
-class BinutilsArmNoneEabihf < Formula
+class BinutilsArmNoneEabi < Formula
 
   desc "binutils for cross-compiling to ARM"
   homepage "https://www.gnu.org/software/binutils"
