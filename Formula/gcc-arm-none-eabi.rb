@@ -8,7 +8,7 @@ class GccArmNoneEabi < Formula
   revision 1
 
 
-  depends_on "gcc"
+  depends_on "binutils-arm-none-eabi"
 
   def install
 
@@ -26,10 +26,14 @@ class GccArmNoneEabi < Formula
     ]    
 
     envvars = %W[
-      CC=gcc
-      CXX=g++
-      CPP=cpp
-      LD=gcc
+      AR_FOR_TARGET=arm-none-eabi-ar \
+	  AS_FOR_TARGET=arm-none-eabi-as \
+	  LD_FOR_TARGET=arm-none-eabi-ld \
+	  NM_FOR_TARGET=arm-none-eabi-nm \
+  	  OBJDUMP_FOR_TARGET=arm-none-eabi-objdump \
+	  RANLIB_FOR_TARGET=arm-none-eabi-ranlib \
+	  READELF_FOR_TARGET=arm-none-eabi-readelf \
+	  STRIP_FOR_TARGET=arm-none-eabi-strip
     ]
 
     system "./contrib/download_prerequisites"
