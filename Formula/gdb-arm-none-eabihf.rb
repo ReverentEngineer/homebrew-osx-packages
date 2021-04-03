@@ -1,4 +1,4 @@
-class GccArmNoneEabihf < Formula
+class GdbArmNoneEabihf < Formula
 
   desc "gdb for debugging ARM binaries"
   homepage "https://www.gnu.org/software/gdb"
