@@ -23,6 +23,7 @@ class GccArmNoneEabihf < Formula
       --without-headers
       --with-newlib
       --disable-libssp
+      --disable-libstdc++-v3
     ]    
 
     envvars = %W[
